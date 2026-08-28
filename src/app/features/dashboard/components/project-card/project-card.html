@@ -1,9 +1,19 @@
 <article class="project-card">
-  <h3>{{ project().name }}</h3>
+  <div class="project-card__header">
+    <h3 class="project-card__name">
+      {{ project().name }}
+    </h3>
 
-  <p>{{ project().description }}</p>
+    <span class="project-card__progress">
+      {{ project().progress }}%
+    </span>
+  </div>
 
-  <div>
-    <span>{{ project().progress }}%</span>
+  <p class="project-card__description">
+    {{ project().description }}
+  </p>
+
+  <div class="project-card__progress-bar">
+    <div class="project-card__progress-fill" [style.width.%]="project().progress"></div>
   </div>
 </article>

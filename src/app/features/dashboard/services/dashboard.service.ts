@@ -33,7 +33,7 @@ export class DashboardService {
       {
         name: 'DevTask AI',
         description: 'Sistema de gerenciamento de projetos com recursos de IA.',
-        progress: 75,
+        progress: 50,
       },
       {
         name: 'Coder Kids',

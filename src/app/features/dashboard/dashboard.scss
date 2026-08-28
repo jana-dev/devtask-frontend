@@ -1,0 +1,117 @@
+:host {
+  display: block;
+  min-height: 100vh;
+  background: #f5f7fb;
+  color: #1f2937;
+}
+
+.dashboard-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  padding: 1rem 2rem;
+
+  background: #ffffff;
+  border-bottom: 1px solid #e5e7eb;
+
+  &__brand,
+  &__user {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+  }
+
+  &__brand {
+    font-size: 1.25rem;
+    font-weight: 700;
+  }
+
+  &__logo {
+    font-size: 1.5rem;
+  }
+
+  &__user {
+    font-size: 0.95rem;
+  }
+}
+
+.dashboard {
+  width: min(1200px, calc(100% - 2rem));
+  margin: 0 auto;
+  padding: 2rem 0;
+
+  &__welcome {
+    margin-bottom: 2rem;
+
+    h1 {
+      margin: 0 0 0.5rem;
+      font-size: 2rem;
+    }
+
+    p {
+      margin: 0;
+      color: #6b7280;
+    }
+  }
+
+  &__summary {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1rem;
+    margin-bottom: 2.5rem;
+  }
+
+  &__projects {
+    h2 {
+      margin: 0 0 1rem;
+      font-size: 1.5rem;
+    }
+  }
+
+  &__project-list {
+    display: grid;
+    gap: 1rem;
+  }
+
+  @media (max-width: 900px) {
+    .dashboard {
+      &__summary {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+  }
+
+  @media (max-width: 600px) {
+    .dashboard {
+      width: min(100% - 2rem, 1200px);
+      padding: 1.5rem 0;
+
+      &__summary {
+        grid-template-columns: 1fr;
+      }
+
+      &__welcome {
+        h1 {
+          font-size: 1.6rem;
+        }
+      }
+    }
+
+    .dashboard-header {
+      padding: 1rem;
+    }
+  }
+
+  @media (max-width: 600px) {
+    .dashboard-header {
+      &__brand {
+        font-size: 1.1rem;
+      }
+
+      &__user {
+        font-size: 0.875rem;
+      }
+    }
+  }
+}

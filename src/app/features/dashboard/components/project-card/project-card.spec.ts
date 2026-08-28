@@ -13,6 +13,12 @@ describe('ProjectCard', () => {
 
     fixture = TestBed.createComponent(ProjectCard);
     component = fixture.componentInstance;
+    fixture.componentRef.setInput('project', {
+      name: 'Projeto de teste',
+      description: 'Descrição do projeto de teste.',
+      progress: 50,
+    });
+
     await fixture.whenStable();
   });
 

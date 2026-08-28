@@ -1,15 +1,37 @@
-<h1>Olá Janaina</h1>
+<header class="dashboard-header">
+  <div class="dashboard-header__brand">
+    <span class="dashboard-header__logo">◈</span>
+    <span>DevTask AI</span>
+  </div>
 
-<p>Aqui está um resumo dos seus projetos.</p>
+  <div class="dashboard-header__user">
+    <span>👤</span>
+    <span>Janaina</span>
+  </div>
+</header>
 
-<div class="summary-cards">
-    @for (card of summaryCards; track card.title){
-    <app-summary-card [title]="card.title" [value]="card.value" />
+<main class="dashboard">
+  <section class="dashboard__welcome">
+    <h1>Olá, Janaina 👋</h1>
+    <p>Aqui está um resumo dos seus projetos.</p>
+  </section>
+
+  <section class="dashboard__summary">
+    @for (card of summaryCards; track card.title) {
+      <app-summary-card
+        [title]="card.title"
+        [value]="card.value"
+      />
     }
-</div>
+  </section>
 
-<div class="projects">
-    @for (project of projects; track project.name) {
-    <app-project-card [project]="project" />
-}
-</div>
+  <section class="dashboard__projects">
+    <h2>Meus projetos</h2>
+
+    <div class="dashboard__project-list">
+      @for (project of projects; track project.name) {
+        <app-project-card [project]="project" />
+      }
+    </div>
+  </section>
+</main>

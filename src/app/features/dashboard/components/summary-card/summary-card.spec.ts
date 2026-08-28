@@ -13,6 +13,8 @@ describe('SummaryCard', () => {
 
     fixture = TestBed.createComponent(SummaryCard);
     component = fixture.componentInstance;
+    fixture.componentRef.setInput('title', 'Projetos');
+    fixture.componentRef.setInput('value', 4);
     await fixture.whenStable();
   });
 
