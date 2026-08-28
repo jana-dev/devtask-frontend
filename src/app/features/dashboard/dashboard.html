@@ -1,3 +1,15 @@
-<h1>DevTask Dashboard</h1>
+<h1>Olá Janaina</h1>
 
-<p>Bem-vinda ao seu espaço de projetos.</p>
+<p>Aqui está um resumo dos seus projetos.</p>
+
+<div class="summary-cards">
+    @for (card of summaryCards; track card.title){
+    <app-summary-card [title]="card.title" [value]="card.value" />
+    }
+</div>
+
+<div class="projects">
+    @for (project of projects; track project.name) {
+    <app-project-card [project]="project" />
+}
+</div>
