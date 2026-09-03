@@ -16,4 +16,12 @@
   <div class="project-card__progress-bar">
     <div class="project-card__progress-fill" [style.width.%]="project().progress"></div>
   </div>
+
+  <div class="project-card__tasks">
+    {{ project().completedTasks }} de {{project().totalTasks }} tarefas concluídas.
+  </div>
+
+  <button class="project-card__details">
+    Ver detalhes do projeto
+  </button>
 </article>
